@@ -63,6 +63,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'tugas/Naive_Bayes_Klasifikasi_Gaussian_pada_Cuaca_Biner_Categorical';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="K-Means Clustering atau Pengelompokan pada Data Iris" href="K_Means_pada_Data_Iris.html" />
+    <link rel="prev" title="Naive Bayes Klasifikasi Gaussian pada Data Iris" href="Naive_Bayes_Klasifikasi_Gaussian_pada_Data_Iris.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -153,11 +155,16 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Mengambil_Data_Dari_Database_Yang_Berbeda_Dan_Menggabungkanya.html">Mengambil Data Dari Database Yang Berbeda Dan Menggabungkanya</a></li>
+<li class="toctree-l1"><a class="reference internal" href="KNN_Classifier_atau_Klasifikasi_pada_Data_Iris.html">KNN Classifier atau Klasifikasi pada Data Iris</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Naive_Bayes_Klasifikasi_Gaussian_pada_Data_Iris.html">Naive Bayes Klasifikasi Gaussian pada Data Iris</a></li>
-<li class="toctree-l1"><a class="reference internal" href="UTS_Naive_Bayes_Classifier.html">UTS Naive Bayes Classifier</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Naive Bayes Klasifikasi Gaussian pada Cuaca (Biner &amp; Categorical)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="K_Means_pada_Data_Iris.html">K-Means Clustering atau Pengelompokan pada Data Iris</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UTS_Sebelah_KNN_Klasifikasi_Biner_Categorical.html">KNN Classifier Categorical</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UTS_Sebelah_Naive_Bayes_Klasifikasi_Gaussian_Biner_Categorical.html">Naive Bayes Classifier Categorical</a></li>
 <li class="toctree-l1"><a class="reference internal" href="UTS_KNN_Classifier.html">UTS KNN Classifier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UTS_Naive_Bayes_Classifier.html">UTS Naive Bayes Classifier</a></li>
 </ul>
 
     </div>
@@ -405,7 +412,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-bca596c8-674e-4081-a4e2-9e8e5cbc5c47">
+  <div id="df-648f0eb2-ef19-4655-ba4d-cb03ad88e27c">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -548,7 +555,7 @@ document.write(`
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-bca596c8-674e-4081-a4e2-9e8e5cbc5c47')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-648f0eb2-ef19-4655-ba4d-cb03ad88e27c')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -599,12 +606,12 @@ document.write(`
 
       <script>
         const buttonEl =
-          document.querySelector('#df-bca596c8-674e-4081-a4e2-9e8e5cbc5c47 button.colab-df-convert');
+          document.querySelector('#df-648f0eb2-ef19-4655-ba4d-cb03ad88e27c button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-bca596c8-674e-4081-a4e2-9e8e5cbc5c47');
+          const element = document.querySelector('#df-648f0eb2-ef19-4655-ba4d-cb03ad88e27c');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -689,7 +696,7 @@ temperature : 0
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-c6eba662-430e-4070-a41f-e8bd9545ca90">
+  <div id="df-2dee8ebd-b863-49d5-b7eb-d0243040ffc3">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -752,7 +759,7 @@ temperature : 0
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-c6eba662-430e-4070-a41f-e8bd9545ca90')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-2dee8ebd-b863-49d5-b7eb-d0243040ffc3')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -803,12 +810,12 @@ temperature : 0
 
       <script>
         const buttonEl =
-          document.querySelector('#df-c6eba662-430e-4070-a41f-e8bd9545ca90 button.colab-df-convert');
+          document.querySelector('#df-2dee8ebd-b863-49d5-b7eb-d0243040ffc3 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-c6eba662-430e-4070-a41f-e8bd9545ca90');
+          const element = document.querySelector('#df-2dee8ebd-b863-49d5-b7eb-d0243040ffc3');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -844,7 +851,7 @@ temperature : 0
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-bc6c1b5d-1bb2-4101-8962-bd67d4659771">
+  <div id="df-eedd9883-044a-4965-8bc0-6d7b4bea53c4">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -987,7 +994,7 @@ temperature : 0
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-bc6c1b5d-1bb2-4101-8962-bd67d4659771')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-eedd9883-044a-4965-8bc0-6d7b4bea53c4')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -1038,12 +1045,12 @@ temperature : 0
 
       <script>
         const buttonEl =
-          document.querySelector('#df-bc6c1b5d-1bb2-4101-8962-bd67d4659771 button.colab-df-convert');
+          document.querySelector('#df-eedd9883-044a-4965-8bc0-6d7b4bea53c4 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-bc6c1b5d-1bb2-4101-8962-bd67d4659771');
+          const element = document.querySelector('#df-eedd9883-044a-4965-8bc0-6d7b4bea53c4');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1109,7 +1116,7 @@ temperature : 0
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-45c13160-33df-40a1-88de-c0bd7835b5aa">
+  <div id="df-fd36a38f-6fc0-4148-a2b3-bc2d3d0d63a2">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1252,7 +1259,7 @@ temperature : 0
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-45c13160-33df-40a1-88de-c0bd7835b5aa')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-fd36a38f-6fc0-4148-a2b3-bc2d3d0d63a2')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -1303,12 +1310,12 @@ temperature : 0
 
       <script>
         const buttonEl =
-          document.querySelector('#df-45c13160-33df-40a1-88de-c0bd7835b5aa button.colab-df-convert');
+          document.querySelector('#df-fd36a38f-6fc0-4148-a2b3-bc2d3d0d63a2 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-45c13160-33df-40a1-88de-c0bd7835b5aa');
+          const element = document.querySelector('#df-fd36a38f-6fc0-4148-a2b3-bc2d3d0d63a2');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1342,7 +1349,7 @@ temperature : 0
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-e0b77432-50d6-4486-a684-fdc61d8d8e50">
+  <div id="df-5153664a-692e-4497-a1b8-c27f5a7b06bc">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1381,7 +1388,7 @@ temperature : 0
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-e0b77432-50d6-4486-a684-fdc61d8d8e50')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-5153664a-692e-4497-a1b8-c27f5a7b06bc')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -1432,12 +1439,12 @@ temperature : 0
 
       <script>
         const buttonEl =
-          document.querySelector('#df-e0b77432-50d6-4486-a684-fdc61d8d8e50 button.colab-df-convert');
+          document.querySelector('#df-5153664a-692e-4497-a1b8-c27f5a7b06bc button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-e0b77432-50d6-4486-a684-fdc61d8d8e50');
+          const element = document.querySelector('#df-5153664a-692e-4497-a1b8-c27f5a7b06bc');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1564,6 +1571,24 @@ temperature : 0
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="Naive_Bayes_Klasifikasi_Gaussian_pada_Data_Iris.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Naive Bayes Klasifikasi Gaussian pada Data Iris</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="K_Means_pada_Data_Iris.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">K-Means Clustering atau Pengelompokan pada Data Iris</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div></div>
   
 </div>
