@@ -1,0 +1,49 @@
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 1305, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/usr/local/lib/python3.10/dist-packages/jupyter_core/utils/__init__.py", line 166, in wrapped
+    return loop.run_until_complete(inner)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 705, in async_execute
+    await self.async_execute_cell(
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 914, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# Memuat/load model dari file
+with open('backpro_model.pkl', 'rb') as file:
+    backpro_loaded = pickle.load(file)
+
+
+# Buat data baru
+new_data = np.array([[5,	4,	1,	1.5]])
+
+# Memuat/load model dari file
+with open('preposcesing.pkl', 'rb') as file:
+    prepocesing_loaded = pickle.load(file)
+
+# Scaling data baru menggunakan skalar yang telah dilatih sebelumnya
+new_data_scaled = prepocesing_loaded.transform(new_data)
+
+# Menggunakan model untuk melakukan prediksi pada data baru
+y_pred = backpro_loaded.predict(new_data_scaled)
+print(y_pred)
+------------------
+
+
+[0;31m[0m
+[0;31mFileNotFoundError[0mTraceback (most recent call last)
+[0;32m<ipython-input-2-05e2756ff6a8>[0m in [0;36m<cell line: 2>[0;34m()[0m
+[1;32m      1[0m [0;31m# Memuat/load model dari file[0m[0;34m[0m[0;34m[0m[0m
+[0;32m----> 2[0;31m [0;32mwith[0m [0mopen[0m[0;34m([0m[0;34m'backpro_model.pkl'[0m[0;34m,[0m [0;34m'rb'[0m[0;34m)[0m [0;32mas[0m [0mfile[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      3[0m     [0mbackpro_loaded[0m [0;34m=[0m [0mpickle[0m[0;34m.[0m[0mload[0m[0;34m([0m[0mfile[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      4[0m [0;34m[0m[0m
+[1;32m      5[0m [0;34m[0m[0m
+
+[0;31mFileNotFoundError[0m: [Errno 2] No such file or directory: 'backpro_model.pkl'
+
