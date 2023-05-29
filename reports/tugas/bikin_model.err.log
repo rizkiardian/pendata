@@ -23,12 +23,12 @@ with open('backpro_model.pkl', 'rb') as file:
 # Buat data baru
 new_data = np.array([[5,	4,	1,	1.5]])
 
-# Memuat/load model dari file
-with open('preposcesing.pkl', 'rb') as file:
-    prepocesing_loaded = pickle.load(file)
+# Memuat/load data normalisasi
+with open('preprocessing.pkl', 'rb') as file:
+    preprocessing_loaded = pickle.load(file)
 
 # Scaling data baru menggunakan skalar yang telah dilatih sebelumnya
-new_data_scaled = prepocesing_loaded.transform(new_data)
+new_data_scaled = preprocessing_loaded.transform(new_data)
 
 # Menggunakan model untuk melakukan prediksi pada data baru
 y_pred = backpro_loaded.predict(new_data_scaled)
@@ -38,7 +38,7 @@ print(y_pred)
 
 [0;31m[0m
 [0;31mFileNotFoundError[0mTraceback (most recent call last)
-[0;32m<ipython-input-2-05e2756ff6a8>[0m in [0;36m<cell line: 2>[0;34m()[0m
+[0;32m<ipython-input-2-86b71f0ebcd6>[0m in [0;36m<cell line: 2>[0;34m()[0m
 [1;32m      1[0m [0;31m# Memuat/load model dari file[0m[0;34m[0m[0;34m[0m[0m
 [0;32m----> 2[0;31m [0;32mwith[0m [0mopen[0m[0;34m([0m[0;34m'backpro_model.pkl'[0m[0;34m,[0m [0;34m'rb'[0m[0;34m)[0m [0;32mas[0m [0mfile[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
 [0m[1;32m      3[0m     [0mbackpro_loaded[0m [0;34m=[0m [0mpickle[0m[0;34m.[0m[0mload[0m[0;34m([0m[0mfile[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
